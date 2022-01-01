@@ -1,4 +1,4 @@
-package com.example.server
+package com.cordapp.simples.server
 
 import net.corda.client.jackson.JacksonSupport
 import org.springframework.beans.factory.annotation.Autowired

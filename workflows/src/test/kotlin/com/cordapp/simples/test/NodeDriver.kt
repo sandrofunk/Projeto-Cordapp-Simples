@@ -1,4 +1,4 @@
-package com.example.test
+package com.cordapp.simples.test
 
 import net.corda.core.identity.CordaX500Name
 import net.corda.core.utilities.getOrThrow

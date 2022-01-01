@@ -1,7 +1,7 @@
-package com.example.test.contract
+package com.cordapp.simples.test.contract
 
-import com.example.contract.IOUContract
-import com.example.state.IOUState
+import com.cordapp.simples.contract.IOUContract
+import com.cordapp.simples.state.IOUState
 import net.corda.core.identity.CordaX500Name
 import net.corda.testing.core.TestIdentity
 import net.corda.testing.node.MockServices
@@ -9,7 +9,7 @@ import net.corda.testing.node.ledger
 import org.junit.Test
 
 class IOUContractTests {
-    private val ledgerServices = MockServices(listOf("com.example.contract", "com.example.flow"))
+    private val ledgerServices = MockServices(listOf("com.cordapp.simples.contract", "com.cordapp.simples.flow"))
     private val megaCorp = TestIdentity(CordaX500Name("MegaCorp", "London", "GB"))
     private val miniCorp = TestIdentity(CordaX500Name("MiniCorp", "New York", "US"))
     private val iouValue = 1

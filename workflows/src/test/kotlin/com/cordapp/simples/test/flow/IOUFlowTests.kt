@@ -1,7 +1,7 @@
-package com.example.test.flow
+package com.cordapp.simples.test.flow
 
-import com.example.flow.ExampleFlow
-import com.example.state.IOUState
+import com.cordapp.simples.flow.ExampleFlow
+import com.cordapp.simples.state.IOUState
 import net.corda.core.contracts.TransactionVerificationException
 import net.corda.core.node.services.queryBy
 import net.corda.core.utilities.getOrThrow
@@ -24,8 +24,8 @@ class IOUFlowTests {
     @Before
     fun setup() {
         network = MockNetwork(MockNetworkParameters(cordappsForAllNodes = listOf(
-                TestCordapp.findCordapp("com.example.contract"),
-                TestCordapp.findCordapp("com.example.flow")
+                TestCordapp.findCordapp("com.cordapp.simples.contract"),
+                TestCordapp.findCordapp("com.cordapp.simples.flow")
         )))
         a = network.createPartyNode()
         b = network.createPartyNode()

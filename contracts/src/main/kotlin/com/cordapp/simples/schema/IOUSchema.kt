@@ -1,4 +1,4 @@
-package com.example.schema
+package com.cordapp.simples.schema
 
 import net.corda.core.schemas.MappedSchema
 import net.corda.core.schemas.PersistentState

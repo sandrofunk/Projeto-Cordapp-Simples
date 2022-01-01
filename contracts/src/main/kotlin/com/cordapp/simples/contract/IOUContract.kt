@@ -1,6 +1,6 @@
-package com.example.contract
+package com.cordapp.simples.contract
 
-import com.example.state.IOUState
+import com.cordapp.simples.state.IOUState
 import net.corda.core.contracts.CommandData
 import net.corda.core.contracts.Contract
 import net.corda.core.contracts.requireSingleCommand
@@ -22,7 +22,7 @@ import net.corda.core.transactions.LedgerTransaction
 class IOUContract : Contract {
     companion object {
         @JvmStatic
-        val ID = "com.example.contract.IOUContract"
+        val ID = "com.cordapp.simples.contract.IOUContract"
     }
 
     /**

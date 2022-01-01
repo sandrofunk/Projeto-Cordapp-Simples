@@ -1,7 +1,7 @@
-package com.example.server
+package com.cordapp.simples.server
 
-import com.example.flow.ExampleFlow.Initiator
-import com.example.state.IOUState
+import com.cordapp.simples.flow.ExampleFlow.Initiator
+import com.cordapp.simples.state.IOUState
 import net.corda.core.contracts.StateAndRef
 import net.corda.core.identity.CordaX500Name
 import net.corda.core.messaging.startTrackedFlow

@@ -1,7 +1,7 @@
-package com.example.state
+package com.cordapp.simples.state
 
-import com.example.contract.IOUContract
-import com.example.schema.IOUSchemaV1
+import com.cordapp.simples.contract.IOUContract
+import com.cordapp.simples.schema.IOUSchemaV1
 import net.corda.core.contracts.BelongsToContract
 import net.corda.core.contracts.ContractState
 import net.corda.core.contracts.LinearState

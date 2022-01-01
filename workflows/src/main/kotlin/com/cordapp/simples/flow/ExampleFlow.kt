@@ -1,10 +1,10 @@
-package com.example.flow
+package com.cordapp.simples.flow
 
 import co.paralleluniverse.fibers.Suspendable
-import com.example.contract.IOUContract
-import com.example.flow.ExampleFlow.Acceptor
-import com.example.flow.ExampleFlow.Initiator
-import com.example.state.IOUState
+import com.cordapp.simples.contract.IOUContract
+import com.cordapp.simples.flow.ExampleFlow.Acceptor
+import com.cordapp.simples.flow.ExampleFlow.Initiator
+import com.cordapp.simples.state.IOUState
 import net.corda.core.contracts.Command
 import net.corda.core.contracts.requireThat
 import net.corda.core.flows.*
