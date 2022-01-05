@@ -23,6 +23,7 @@ import net.corda.core.schemas.QueryableState
  */
 @BelongsToContract(IOUContract::class)
 data class IOUState(val value: Int,
+                    val desc: String,
                     val lender: Party,
                     val borrower: Party,
                     override val linearId: UniqueIdentifier = UniqueIdentifier()):
@@ -36,6 +37,7 @@ data class IOUState(val value: Int,
                     this.lender.name.toString(),
                     this.borrower.name.toString(),
                     this.value,
+                    this.desc,
                     this.linearId.id
             )
             else -> throw IllegalArgumentException("Unrecognised schema $schema")

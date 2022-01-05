@@ -5,6 +5,8 @@ import net.corda.core.contracts.CommandData
 import net.corda.core.contracts.Contract
 import net.corda.core.contracts.requireSingleCommand
 import net.corda.core.contracts.requireThat
+import net.corda.core.node.services.Vault
+import net.corda.core.node.services.vault.QueryCriteria
 import net.corda.core.transactions.LedgerTransaction
 
 /**
@@ -36,6 +38,7 @@ class IOUContract : Contract {
             "No inputs should be consumed when issuing an IOU." using (tx.inputs.isEmpty())
             "Only one output state should be created." using (tx.outputs.size == 1)
             val out = tx.outputsOfType<IOUState>().single()
+            "The Desc variable cannot be empty" using (out.value.toString() != " ")
             "The lender and the borrower cannot be the same entity." using (out.lender != out.borrower)
             "All of the participants must be signers." using (command.signers.containsAll(out.participants.map { it.owningKey }))
 
